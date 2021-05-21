@@ -1,0 +1,12 @@
+name: Github actions for deploying hallajs.net's static page
+
+on: pull_request
+
+jobs:
+  hugo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
