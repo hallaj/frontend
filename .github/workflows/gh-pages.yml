@@ -39,4 +39,5 @@ jobs:
           external_repository: hallaj/hallaj.github.io
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./public
+          cname: www.hallajs.net
         if: github.ref == 'refs/heads/master'
