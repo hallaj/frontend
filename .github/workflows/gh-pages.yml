@@ -30,3 +30,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: ghpages-stage.hallajs.net
+        if: github.ref != 'refs/heads/master'
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: hallaj/hallaj.github.io
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./public
+        if: github.ref == 'refs/heads/master'
