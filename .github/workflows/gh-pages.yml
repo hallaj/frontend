@@ -22,3 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
       - run: hugo --minify
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: stage.hallajs.net
