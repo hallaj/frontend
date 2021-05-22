@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: hallaj/hallaj.inu.io
+          repository: hallaj/hallaj.github.io
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
