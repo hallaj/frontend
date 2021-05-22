@@ -1,6 +1,9 @@
 name: Github actions for deploying hallajs.net's static page
 
-on: [pull_request]
+on:
+  pull_request:
+  push:
+    branches: [master]
 
 jobs:
   hugo:
