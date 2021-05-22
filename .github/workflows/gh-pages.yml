@@ -9,4 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: hallaj/hallaj.inu.io
+      - uses: actions/checkout@v2
+        with:
           fetch-depth: 0
+          path: content/posts
+      - uses: peaceiris/actions-hugo@v2
+      - uses: actions/cache@v2
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+      - run: hugo --minify
