@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
           path: content/posts
-      - run: sed -i 's;^baseURL = .*;baseURL = "http://gh-pages.hallajs.net";' config.toml
+      - run: sed -i 's;^baseURL = .*;baseURL = "http://ghpages-stage.hallajs.net";' config.toml
         if: github.ref != 'refs/heads/master'
       - uses: peaceiris/actions-hugo@v2
       - uses: actions/cache@v2
